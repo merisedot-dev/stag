@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/com.github.merisedotdev.stag.desktop.in
+data/com.github.merisedotdev.stag.metainfo.xml.in
+data/com.github.merisedotdev.stag.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.github.merisedotdev.stag
+Exec=@bindir@/stag --gapplication-service

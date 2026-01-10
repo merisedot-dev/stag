@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=stag
+Exec=stag
+Icon=com.github.merisedotdev.stag
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true
