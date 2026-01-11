@@ -31,7 +31,7 @@
         devShells.default = pkgs.mkShell {
           name = "stagshell";
           inputsFrom = [ self.packages."${system}".default ];
-          packages = [ ];
+          packages = with pkgs; [ just ];
         };
       }
     );

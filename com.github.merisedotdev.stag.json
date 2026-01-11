@@ -30,7 +30,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///var/home/kheldae/Documents/proj_persos/merisedot-dev"
+                    "url" : "https://github.com/merisedot-dev/stag"
                 }
             ]
         }
