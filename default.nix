@@ -2,6 +2,7 @@
   pkgs,
   stdenv,
   python3Packages,
+  merise_dot,
   ...
 }:
 
@@ -13,19 +14,21 @@ stdenv.mkDerivation {
   name = "stag";
   version = stag_version;
 
+  # source file positions
   src = ./.;
 
   nativeBuildInputs = with pkgs; [
-    # build toolkits
-    meson
-    cmake
-    ninja
-    pkg-config
-    # languages (because)
+    meson # primary
+    cmake # required by meson
+    ninja # required by meson
+    pkg-config # required by meson
+    # languages (because meson is kinda stupid)
     python3
     # extra
     desktop-file-utils
   ];
+
+  buildInputs = [ merise_dot ];
 
   propagatedBuildInputs =
     with pkgs;
