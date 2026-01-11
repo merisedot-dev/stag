@@ -51,12 +51,13 @@ class StagApplication(Adw.Application):
 
     def on_about_action(self, *args):
         """Callback for the app.about action."""
-        about = Adw.AboutDialog(application_name='stag',
-                                application_icon='com.github.merisedotdev.stag',
-                                developer_name='kheldae',
-                                version='0.1.0',
-                                developers=['kheldae'],
-                                copyright='© 2026 kheldae')
+        about = Adw.AboutDialog(
+            application_name='stag',
+            application_icon='com.github.merisedotdev.stag',
+            developer_name='kheldae',
+            version='0.1.0',
+            developers=['kheldae'],
+            copyright='© 2026 kheldae')
         # Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
         about.set_translator_credits(_('translator-credits'))
         about.present(self.props.active_window)

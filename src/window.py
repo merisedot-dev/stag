@@ -20,11 +20,12 @@
 from gi.repository import Adw
 from gi.repository import Gtk
 
+
 @Gtk.Template(resource_path='/com/github/merisedotdev/stag/window.ui')
 class StagWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'StagWindow'
 
-    label = Gtk.Template.Child()
+    # TODO fetch kids
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
