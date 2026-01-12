@@ -25,7 +25,19 @@ from gi.repository import Gtk
 class StagWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'StagWindow'
 
-    # TODO fetch kids
+    # headerbar kids
+    header = Gtk.Template.Child()
+    open_btn = Gtk.Template.Child()
+    undo_btn = Gtk.Template.Child()
+    redo_btn = Gtk.Template.Child()
+    mainmenu_btn = Gtk.Template.Child()
+
+    # stack kids
+    stack = Gtk.Template.Child()
+    stag_logo = Gtk.Template.Child()
+    version_lbl = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
+        # GTK constructors like to do things
         super().__init__(**kwargs)
+        # actions linking

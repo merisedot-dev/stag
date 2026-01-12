@@ -13,7 +13,7 @@
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="AdwHeaderBar" id="stag_header">
+          <object class="AdwHeaderBar" id="header">
             <child>
               <object class="AdwSplitButton" id="open_btn">
                 <property name="action-name">open</property>
@@ -37,6 +37,69 @@
               <object class="GtkMenuButton" id="mainmenu_btn">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">stag_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkOverlay">
+            <child>
+              <object class="GtkStack" id="stack">
+                <property name="transition-type">crossfade</property>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="child">
+                      <object class="GtkOverlay">
+                        <property name="child">
+                          <object class="GtkGrid">
+                            <property name="column-homogeneous">True</property>
+                            <property name="row-homogeneous">True</property>
+                            <child>
+                              <object class="GtkPicture" id="stag_logo">
+                                <property name="vexpand">True</property>
+                                <layout>
+                                  <property name="column">1</property>
+                                  <property name="column-span">3</property>
+                                  <property name="row">1</property>
+                                  <property name="row-span">4</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <layout>
+                                  <property name="column">4</property>
+                                  <property name="row">5</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <layout>
+                                  <property name="column">0</property>
+                                  <property name="row">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="version_lbl">
+                                <property name="halign">center</property>
+                                <property name="name">version</property>
+                                <property name="valign">start</property>
+                                <layout>
+                                  <property name="column">2</property>
+                                  <property name="row">5</property>
+                                </layout>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                    <property name="name">stag_welcome</property>
+                    <property name="title">MeriseGTK</property>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
