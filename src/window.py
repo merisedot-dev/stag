@@ -1,29 +1,17 @@
-# window.py
-#
-# Copyright 2026 kheldae
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
+from .model import MGTKProject
 
 from gi.repository import Adw
-from gi.repository import Gtk
 from gi.repository import Gio
+from gi.repository import GObject
+from gi.repository import Gtk
 
 
 @Gtk.Template(resource_path='/com/github/merisedotdev/stag/window.ui')
 class StagWindow(Adw.ApplicationWindow):
+    """The root window.
+    While other components may be defined later on, this may be the only thing
+    allowed to use the `Adw.ApplicationWindow` type for the template.
+    """
     __gtype_name__ = 'StagWindow'
 
     # headerbar kids
@@ -39,15 +27,42 @@ class StagWindow(Adw.ApplicationWindow):
     version_lbl = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
+        self._proj: MGTKProject = None
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
         super().__init__(**kwargs)
         # stateless actions linking
-        for action in ["open"]:
+        for action in [
+                "add_db", "add_script", "close", "mk_proj", "open", "save"
+        ]:
             gaction = Gio.SimpleAction.new(action, None)
             gaction.connect("activate", getattr(self, f"on_{action}"))
             self._actions[action] = gaction
             self.add_action(gaction)
+        # TODO link other parts of the GUI
+
+    # PROPERTIES
+
+    @GObject.Property(type=MGTKProject)
+    def project(self) -> MGTKProject:
+        return self._proj
+
+    # STATELESS ACTIONS
+
+    def on_add_db(self, action, data) -> None:
+        pass  # TODO
+
+    def on_add_script(self, action, data) -> None:
+        pass  # TODO
+
+    def on_close(self, action, data) -> None:
+        pass  # TODO
+
+    def on_mk_proj(self, action, data) -> None:
+        pass  # TODO
 
     def on_open(self, action, data) -> None:
+        pass  # TODO
+
+    def on_save(self, action, data) -> None:
         pass  # TODO
