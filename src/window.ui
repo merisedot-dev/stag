@@ -16,20 +16,20 @@
           <object class="AdwHeaderBar" id="header">
             <child>
               <object class="AdwSplitButton" id="open_btn">
-                <property name="action-name">open</property>
+                <property name="action-name">win.open</property>
                 <property name="label" translatable="yes">Open Project</property>
                 <property name="menu-model">proj_menu</property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="undo_btn">
-                <property name="action-name">undo</property>
+                <property name="action-name">win.undo</property>
                 <property name="icon-name">edit-undo-symbolic</property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="redo_btn">
-                <property name="action-name">redo</property>
+                <property name="action-name">win.redo</property>
                 <property name="icon-name">edit-redo-symbolic</property>
               </object>
             </child>
@@ -110,27 +110,27 @@
   <menu id="proj_menu"/>
   <menu id="stag_menu">
     <item>
-      <attribute name="action">mk_proj</attribute>
+      <attribute name="action">win.mk_proj</attribute>
       <attribute name="label" translatable="yes">MkProject</attribute>
     </item>
     <section>
       <attribute name="label" translatable="yes">MkFile</attribute>
       <item>
-        <attribute name="action">add_db</attribute>
+        <attribute name="action">win.add_db</attribute>
         <attribute name="label" translatable="yes">MkDB</attribute>
       </item>
       <item>
-        <attribute name="action">add_script</attribute>
+        <attribute name="action">win.add_script</attribute>
         <attribute name="label" translatable="yes">MkScript</attribute>
       </item>
     </section>
     <section>
       <item>
-        <attribute name="action">save</attribute>
+        <attribute name="action">win.save</attribute>
         <attribute name="label" translatable="yes">Save</attribute>
       </item>
       <item>
-        <attribute name="action">close</attribute>
+        <attribute name="action">win.close</attribute>
         <attribute name="label" translatable="yes">Close</attribute>
       </item>
     </section>

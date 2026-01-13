@@ -19,6 +19,7 @@
 
 from gi.repository import Adw
 from gi.repository import Gtk
+from gi.repository import Gio
 
 
 @Gtk.Template(resource_path='/com/github/merisedotdev/stag/window.ui')
@@ -38,6 +39,15 @@ class StagWindow(Adw.ApplicationWindow):
     version_lbl = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
+        self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
         super().__init__(**kwargs)
-        # actions linking
+        # stateless actions linking
+        for action in ["open"]:
+            gaction = Gio.SimpleAction.new(action, None)
+            gaction.connect("activate", getattr(self, f"on_{action}"))
+            self._actions[action] = gaction
+            self.add_action(gaction)
+
+    def on_open(self, action, data) -> None:
+        pass  # TODO

@@ -57,24 +57,24 @@ msgstr "Ouvrir"
 
 #: src/window.ui:114
 msgid "MkProject"
-msgstr ""
+msgstr "Nouveau Projet"
 
 #: src/window.ui:117
 msgid "MkFile"
-msgstr ""
+msgstr "Nouveau Fichier"
 
 #: src/window.ui:120
 msgid "MkDB"
-msgstr ""
+msgstr "Base de Données"
 
 #: src/window.ui:124
 msgid "MkScript"
-msgstr ""
+msgstr "Nouveau Script"
 
 #: src/window.ui:130
 msgid "Save"
-msgstr ""
+msgstr "Sauvegarder"
 
 #: src/window.ui:134
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
