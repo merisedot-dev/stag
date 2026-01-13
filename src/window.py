@@ -24,7 +24,10 @@ class StagWindow(Adw.ApplicationWindow):
     stag_logo = Gtk.Template.Child()
     version_lbl = Gtk.Template.Child()
 
-    def __init__(self, **kwargs):
+    # project creation form kids
+    # TODO write kids first
+
+    def __init__(self, **kwargs) -> None:
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
         super().__init__(**kwargs)
@@ -39,6 +42,7 @@ class StagWindow(Adw.ApplicationWindow):
         # TODO link other parts of the GUI
 
     # PROPERTIES
+    # TODO
 
     # STATELESS ACTIONS
 
