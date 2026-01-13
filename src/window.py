@@ -1,5 +1,3 @@
-from .model import MGTKProject
-
 from gi.repository import Adw
 from gi.repository import Gio
 from gi.repository import GObject
@@ -27,7 +25,6 @@ class StagWindow(Adw.ApplicationWindow):
     version_lbl = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
-        self._proj: MGTKProject = None
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
         super().__init__(**kwargs)
@@ -42,10 +39,6 @@ class StagWindow(Adw.ApplicationWindow):
         # TODO link other parts of the GUI
 
     # PROPERTIES
-
-    @GObject.Property(type=MGTKProject)
-    def project(self) -> MGTKProject:
-        return self._proj
 
     # STATELESS ACTIONS
 
