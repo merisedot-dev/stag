@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-11 18:42+0100\n"
+"POT-Creation-Date: 2026-01-13 20:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,26 +54,54 @@ msgstr ""
 msgid "Open Project"
 msgstr ""
 
-#: src/window.ui:114
+#: src/window.ui:113
+msgid "New Project"
+msgstr ""
+
+#: src/window.ui:126
+msgid "Project Name"
+msgstr ""
+
+#: src/window.ui:136
+msgid "Target SGBD"
+msgstr ""
+
+#: src/window.ui:146
+msgid "Project Location"
+msgstr ""
+
+#: src/window.ui:168
+msgid "Create Project"
+msgstr ""
+
+#: src/window.ui:213
+msgid "Cancel Project"
+msgstr ""
+
+#: src/window.ui:264
 msgid "MkProject"
 msgstr ""
 
-#: src/window.ui:117
+#: src/window.ui:268
+msgid "OpnProj"
+msgstr ""
+
+#: src/window.ui:271
 msgid "MkFile"
 msgstr ""
 
-#: src/window.ui:120
+#: src/window.ui:274
 msgid "MkDB"
 msgstr ""
 
-#: src/window.ui:124
+#: src/window.ui:278
 msgid "MkScript"
 msgstr ""
 
-#: src/window.ui:130
+#: src/window.ui:284
 msgid "Save"
 msgstr ""
 
-#: src/window.ui:134
+#: src/window.ui:288
 msgid "Close"
 msgstr ""

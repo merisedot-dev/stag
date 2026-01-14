@@ -153,7 +153,7 @@
                                 <child>
                                   <object class="GtkEntry" id="proj_name">
                                     <property name="focusable">True</property>
-                                    <property name="input-hints">lowercase | none</property>
+                                    <property name="input-hints">lowercase|none</property>
                                     <property name="input-purpose">alpha</property>
                                     <property name="width-chars">32</property>
                                     <layout>
@@ -164,9 +164,10 @@
                                   </object>
                                 </child>
                                 <child>
-                                  <object class="GtkButton" id="validate">
+                                  <object class="GtkButton" id="validate_btn">
                                     <property name="label" translatable="yes">Create Project</property>
                                     <property name="margin-top">16</property>
+                                    <signal name="clicked" handler="validate_btn_clicked"/>
                                     <layout>
                                       <property name="column">1</property>
                                       <property name="row">3</property>
@@ -202,6 +203,42 @@
                                       <property name="column">1</property>
                                       <property name="column-span">2</property>
                                       <property name="row">2</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="cancel_btn">
+                                    <property name="halign">start</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="label" translatable="yes">Cancel Project</property>
+                                    <property name="margin-top">16</property>
+                                    <signal name="clicked" handler="cancel_btn_clicked"/>
+                                    <layout>
+                                      <property name="column">2</property>
+                                      <property name="row">3</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="path_picker">
+                                    <property name="halign">start</property>
+                                    <property name="hexpand">True</property>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">folder-open-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="path_picker_lbl"/>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <layout>
+                                      <property name="column">1</property>
+                                      <property name="column-span">3</property>
+                                      <property name="row">1</property>
                                     </layout>
                                   </object>
                                 </child>

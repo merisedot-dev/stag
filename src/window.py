@@ -25,9 +25,14 @@ class StagWindow(Adw.ApplicationWindow):
     version_lbl = Gtk.Template.Child()
 
     # project creation form kids
-    # TODO write kids first
+    proj_name = Gtk.Template.Child()
+    mysql_selector = Gtk.Template.Child()
+    cancel_btn = Gtk.Template.Child()
+    path_picker = Gtk.Template.Child()
+    path_picker_lbl = Gtk.Template.Child()
 
     def __init__(self, **kwargs) -> None:
+        # TODO define performed actions stack
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
         super().__init__(**kwargs)
@@ -43,6 +48,15 @@ class StagWindow(Adw.ApplicationWindow):
 
     # PROPERTIES
     # TODO
+
+    # SPECIFIC CALLBACKS
+    @Gtk.Template.Callback()
+    def cancel_btn_clicked(self, button) -> None:
+        pass  # TODO
+
+    @Gtk.Template.Callback()
+    def validate_btn_clicked(self, button) -> None:
+        pass  # TODO
 
     # STATELESS ACTIONS
 
