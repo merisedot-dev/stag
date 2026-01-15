@@ -3,6 +3,8 @@ from gi.repository import Gio
 from gi.repository import GObject
 from gi.repository import Gtk
 
+from .project import StagProject
+
 
 @Gtk.Template(resource_path='/com/github/merisedotdev/stag/window.ui')
 class StagWindow(Adw.ApplicationWindow):
@@ -32,7 +34,8 @@ class StagWindow(Adw.ApplicationWindow):
     path_picker_lbl = Gtk.Template.Child()
 
     def __init__(self, **kwargs) -> None:
-        # TODO define performed actions stack
+        self._project: StagProject = None
+        # GTK tools
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
         super().__init__(**kwargs)
@@ -47,7 +50,17 @@ class StagWindow(Adw.ApplicationWindow):
         # TODO link other parts of the GUI
 
     # PROPERTIES
-    # TODO
+    @GObject.Property(type=StagProject)
+    def project(self) -> StagProject:
+        return self._project
+
+    # INTERMEDIATES
+    def _set_page(self, page_name: str) -> None:
+        """Change displayed screen.
+        :param page_name: the name of the page to display
+        """
+        self.stack.set_visible_child_name(page_name)
+        self.__update_actions()
 
     # SPECIFIC CALLBACKS
     @Gtk.Template.Callback()
