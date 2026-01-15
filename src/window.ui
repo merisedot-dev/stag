@@ -96,7 +96,7 @@
                         </property>
                       </object>
                     </property>
-                    <property name="name">stag_welcome</property>
+                    <property name="name">welcome</property>
                     <property name="title">MeriseGTK</property>
                   </object>
                 </child>
@@ -248,6 +248,15 @@
                         </property>
                       </object>
                     </property>
+                    <property name="name">project_form</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="child">
+                      <object class="GtkOverlay"/>
+                    </property>
+                    <property name="name">workspace</property>
                   </object>
                 </child>
               </object>

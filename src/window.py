@@ -5,6 +5,11 @@ from gi.repository import Gtk
 
 from .project import StagProject
 
+# CONSTANTS
+DEFAULT_SCREEN_NAME: str = "welcome"
+WORKSPACE_SCREEN_NAME: str = "workspace"
+PROJECT_FORM_SCREEN_NAME: str = "project_form"
+
 
 @Gtk.Template(resource_path='/com/github/merisedotdev/stag/window.ui')
 class StagWindow(Adw.ApplicationWindow):
@@ -65,7 +70,7 @@ class StagWindow(Adw.ApplicationWindow):
     # SPECIFIC CALLBACKS
     @Gtk.Template.Callback()
     def cancel_btn_clicked(self, button) -> None:
-        pass  # TODO
+        self._project = None
 
     @Gtk.Template.Callback()
     def validate_btn_clicked(self, button) -> None:
