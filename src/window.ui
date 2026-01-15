@@ -165,9 +165,9 @@
                                 </child>
                                 <child>
                                   <object class="GtkButton" id="validate_btn">
+                                    <property name="action-name">win.validate</property>
                                     <property name="label" translatable="yes">Create Project</property>
                                     <property name="margin-top">16</property>
-                                    <signal name="clicked" handler="validate_btn_clicked"/>
                                     <layout>
                                       <property name="column">1</property>
                                       <property name="row">3</property>
@@ -208,11 +208,11 @@
                                 </child>
                                 <child>
                                   <object class="GtkButton" id="cancel_btn">
+                                    <property name="action-name">win.cancel</property>
                                     <property name="halign">start</property>
                                     <property name="hexpand">True</property>
                                     <property name="label" translatable="yes">Cancel Project</property>
                                     <property name="margin-top">16</property>
-                                    <signal name="clicked" handler="cancel_btn_clicked"/>
                                     <layout>
                                       <property name="column">2</property>
                                       <property name="row">3</property>

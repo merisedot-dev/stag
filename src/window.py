@@ -69,15 +69,6 @@ class StagWindow(Adw.ApplicationWindow):
         self.stack.set_visible_child_name(page_name)
         self.__update_actions()
 
-    # SPECIFIC CALLBACKS
-    @Gtk.Template.Callback()
-    def cancel_btn_clicked(self, button) -> None:
-        self._project = None
-
-    @Gtk.Template.Callback()
-    def validate_btn_clicked(self, button) -> None:
-        pass  # TODO
-
     # STATELESS ACTIONS
 
     def on_add_db(self, action, data) -> None:

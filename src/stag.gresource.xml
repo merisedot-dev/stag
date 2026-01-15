@@ -2,7 +2,7 @@
 <!-- Created with Cambalache 0.96.3 -->
 <gresources>
   <gresource prefix="/com/github/merisedotdev/stag">
-    <file preprocess="xml-stripblanks">window.ui</file>
-    <file preprocess="xml-stripblank">entity.ui</file>
+    <file>window.ui</file>
+    <file>entity.ui</file>
   </gresource>
 </gresources>
