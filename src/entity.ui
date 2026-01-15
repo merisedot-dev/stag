@@ -1,6 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Created with Cambalache 0.96.3 -->
 <interface>
+  <!-- interface-name entity.ui -->
   <requires lib="gtk" version="4.0"/>
-  <template class="StagEntityEditor" parent="GtkBox"/>
+  <template class="StagEntityEditor" parent="GtkBox">
+    <child>
+      <object class="GtkLabel">
+        <property name="label">miaouh</property>
+      </object>
+    </child>
+  </template>
 </interface>
