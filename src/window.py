@@ -1,3 +1,5 @@
+from .controls.test import test
+
 from gi.repository import Adw
 from gi.repository import Gio
 from gi.repository import GObject

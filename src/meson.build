@@ -2,7 +2,8 @@ pkgdatadir = get_option('prefix') / get_option('datadir') / meson.project_name()
 moduledir = pkgdatadir / 'stag'
 gnome = import('gnome')
 
-gnome.compile_resources('stag',
+gnome.compile_resources(
+  'stag',
   'stag.gresource.xml',
   gresource_bundle: true,
   install: true,
@@ -23,7 +24,7 @@ configure_file(
   configuration: conf,
   install: true,
   install_dir: get_option('bindir'),
-  install_mode: 'rwxr-xr-x'
+  install_mode: 'rwxr-xr-x',
 )
 
 stag_sources = [
@@ -33,3 +34,5 @@ stag_sources = [
 ]
 
 install_data(stag_sources, install_dir: moduledir)
+
+subdir('controls')

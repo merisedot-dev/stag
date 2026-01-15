@@ -3,5 +3,6 @@
 <!-- Created with Cambalache 0.96.3 -->
 <cambalache-project version="0.96.0" target_tk="gtk-4.0">
   <gresources filename="stag.gresource.xml" sha256="2c5527b7159128438f6deea813b1d2b41a80c9f2df572f344f37f8a1878d0264"/>
+  <gresources filename="controls/controls.gresource.xml" sha256="82f136e332b67d807595cd883f7caae8d1e328bd30ac10eff690073e865fbe20"/>
   <ui template-class="StagWindow" filename="window.ui" sha256="1d82ede399b107926dd708db3c5cfea8f1fd65d872f99498bf7666aa703aff5e"/>
 </cambalache-project>
