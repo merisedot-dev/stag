@@ -29,6 +29,7 @@ configure_file(
 
 stag_sources = [
   '__init__.py',
+  'entity.py',
   'main.py',
   'project.py',
   'window.py',
