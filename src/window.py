@@ -1,11 +1,8 @@
-from gi.repository import Adw
-from gi.repository import Gio
-from gi.repository import GObject
-from gi.repository import Gtk
+from gi.repository import Adw, Gio, Gtk, GObject
 
 from .project import StagProject
 
-# CONSTANTS
+# screen-related constants
 DEFAULT_SCREEN_NAME: str = "welcome"
 WORKSPACE_SCREEN_NAME: str = "workspace"
 PROJECT_FORM_SCREEN_NAME: str = "project_form"
@@ -37,6 +34,11 @@ class StagWindow(Adw.ApplicationWindow):
     cancel_btn = Gtk.Template.Child()
     path_picker = Gtk.Template.Child()
     path_picker_lbl = Gtk.Template.Child()
+
+    # toolbar kids
+    # TODO write the whole interface first
+    editor_stack = Gtk.Template.Child()
+    entity_editor = Gtk.Template.Child()
 
     def __init__(self, **kwargs) -> None:
         self._project: StagProject = None
