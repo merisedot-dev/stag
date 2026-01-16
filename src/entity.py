@@ -1,7 +1,7 @@
 from gi.repository import Gtk
 
 
-@Gtk.Template(resourcepath="/com/github/merisedotdev/stag/entity.ui")
+@Gtk.Template(resource_path="/com/github/merisedotdev/stag/entity.ui")
 class StagEntityEditor(Gtk.Box):
     """Entity editor interface.
     """

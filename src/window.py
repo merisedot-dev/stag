@@ -38,6 +38,7 @@ class StagWindow(Adw.ApplicationWindow):
     # toolbar kids
     # TODO write the whole interface first
     editor_stack = Gtk.Template.Child()
+    entity_editor = Gtk.Template.Child()
 
     def __init__(self, **kwargs) -> None:
         self._project: StagProject = None
