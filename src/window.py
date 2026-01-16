@@ -64,7 +64,7 @@ class StagWindow(Adw.ApplicationWindow):
     # PROPERTIES
     @GObject.Property(type=StagProject)
     def project(self) -> StagProject:
-        return self._tmp_project
+        return self._project
 
     # INTERMEDIATES
     def _set_page(self, page_name: str) -> None:
@@ -82,10 +82,13 @@ class StagWindow(Adw.ApplicationWindow):
         pass  # TODO
 
     def on_cancel(self, action, data) -> None:
-        self._set_page(DEFAULT_SCREEN_NAME)
+        self._tmp_project = None
+        self._set_page(DEFAULT_SCREEN_NAME
+                       if not self._project else WORKSPACE_SCREEN_NAME)
 
     def on_close(self, action, data) -> None:
-        pass  # TODO
+        self._project = None
+        self._set_page(DEFAULT_SCREEN_NAME)
 
     def on_mk_proj(self, action, data) -> None:
         self._tmp_project = StagProject()  # empty project for now
@@ -98,5 +101,9 @@ class StagWindow(Adw.ApplicationWindow):
         pass  # TODO
 
     def on_validate(self, action, data) -> None:
-        # TODO finalise project
-        self._set_page(WORKSPACE_SCREEN_NAME)
+        if not self._project:
+            self._project = self._tmp_project
+            self._tmp_project = None
+            self._set_page(WORKSPACE_SCREEN_NAME)
+        else:  # TODO find a way to build a popup
+            self._set_page(DEFAULT_SCREEN_NAME)

@@ -15,9 +15,10 @@
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkLabel">
-                        <property name="label">test</property>
-                      </object>
+                      <object class="GtkButton" id="mkentity_btn"/>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="mklink_btn"/>
                     </child>
                   </object>
                 </property>
