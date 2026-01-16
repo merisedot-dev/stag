@@ -6,8 +6,8 @@
   <requires lib="gtk" version="4.12"/>
   <requires lib="libadwaita" version="1.4"/>
   <template class="StagWindow" parent="AdwApplicationWindow">
-    <property name="default-height">900</property>
-    <property name="default-width">1600</property>
+    <property name="default-height">800</property>
+    <property name="default-width">1400</property>
     <property name="title">MeriseGTK</property>
     <child>
       <object class="GtkBox">
@@ -46,6 +46,7 @@
           <object class="GtkOverlay">
             <child>
               <object class="GtkStack" id="stack">
+                <property name="halign">center</property>
                 <property name="transition-type">crossfade</property>
                 <property name="visible-child-name">welcome</property>
                 <child>
@@ -262,6 +263,7 @@
                             <property name="end-child">
                               <object class="GtkStack" id="editor_stack">
                                 <property name="transition-type">crossfade</property>
+                                <property name="visible-child-name">empty</property>
                                 <child>
                                   <object class="GtkStackPage">
                                     <property name="child">
@@ -270,10 +272,15 @@
                                     <property name="name">entity</property>
                                   </object>
                                 </child>
+                                <child>
+                                  <object class="GtkStackPage">
+                                    <property name="child">
+                                      <object class="GtkLabel"/>
+                                    </property>
+                                    <property name="name">empty</property>
+                                  </object>
+                                </child>
                               </object>
-                            </property>
-                            <property name="start-child">
-                              <object class="GtkPaned"/>
                             </property>
                           </object>
                         </property>

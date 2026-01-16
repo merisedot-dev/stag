@@ -12,7 +12,7 @@
       </object>
     </child>
     <child>
-      <object class="GtkStack" id="stack">
+      <object class="GtkStack" id="ent_stack">
         <property name="transition-type">crossfade</property>
         <property name="vexpand">True</property>
         <child>

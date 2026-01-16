@@ -2,9 +2,9 @@
 <!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
 <!-- Created with Cambalache 0.96.3 -->
 <cambalache-project version="0.96.0" target_tk="gtk-4.0">
-  <gresources filename="stag.gresource.xml" sha256="2059a49f3e729c7a7071070840ae0f36427f9561d32d4dd3cd97ed9fa5147c44"/>
-  <ui template-class="StagEntityEditor" filename="entity.ui" sha256="4866b7fc55b2ab4b86937a06b605a4f4a3f4e21eab276d6cdbd7aad017985f70"/>
-  <ui template-class="StagWindow" filename="window.ui" sha256="8a35cc3297f543183f6e44a2ab849058fca3a69e7a59979597a8257a7085b3df">
+  <gresources filename="stag.gresource.xml" sha256="e33f2501acf45f898183fa8ec0fea2798a845c377f29c20dc7f151166debf3b5"/>
+  <ui template-class="StagEntityEditor" filename="editor.ui" sha256="0950e5bcdb91b153c8f16553ac18f32146a4b5566b61be9113460dba34891434"/>
+  <ui template-class="StagWindow" filename="window.ui" sha256="940c9dbf874ceff77b36b38d370f37d937dbfbf31409305ebb502a5eb623b112">
     <requires>StagEntityEditor</requires>
   </ui>
 </cambalache-project>

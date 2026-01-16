@@ -48,7 +48,8 @@ class StagWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
         # stateless actions linking
         for action in [
-                "add_db", "add_script", "close", "mk_proj", "open", "save"
+                "add_db", "add_script", "cancel", "close", "mk_proj", "open",
+                "save", "validate"
         ]:
             gaction = Gio.SimpleAction.new(action, None)
             gaction.connect("activate", getattr(self, f"on_{action}"))
@@ -76,11 +77,14 @@ class StagWindow(Adw.ApplicationWindow):
     def on_add_script(self, action, data) -> None:
         pass  # TODO
 
+    def on_cancel(self, action, data) -> None:
+        self._set_page(DEFAULT_SCREEN_NAME)
+
     def on_close(self, action, data) -> None:
         pass  # TODO
 
     def on_mk_proj(self, action, data) -> None:
-        self._project = StagProject()
+        self._project = StagProject()  # empty project for now
         self._set_page(PROJECT_FORM_SCREEN_NAME)
 
     def on_open(self, action, data) -> None:
@@ -88,3 +92,6 @@ class StagWindow(Adw.ApplicationWindow):
 
     def on_save(self, action, data) -> None:
         pass  # TODO
+
+    def on_validate(self, action, data) -> None:
+        self._set_page(WORKSPACE_SCREEN_NAME)

@@ -3,6 +3,6 @@
 <gresources>
   <gresource prefix="/com/github/merisedotdev/stag">
     <file>window.ui</file>
-    <file>entity.ui</file>
+    <file>editor.ui</file>
   </gresource>
 </gresources>
