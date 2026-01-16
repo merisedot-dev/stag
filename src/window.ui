@@ -282,6 +282,9 @@
                                 </child>
                               </object>
                             </property>
+                            <property name="start-child">
+                              <object class="GtkPaned"/>
+                            </property>
                           </object>
                         </property>
                       </object>

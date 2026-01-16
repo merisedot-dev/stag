@@ -32,6 +32,7 @@ stag_sources = [
   'editor.py',
   'main.py',
   'project.py',
+  'toolbar.py',
   'window.py',
 ]
 

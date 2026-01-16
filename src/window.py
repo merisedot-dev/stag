@@ -35,10 +35,12 @@ class StagWindow(Adw.ApplicationWindow):
     path_picker = Gtk.Template.Child()
     path_picker_lbl = Gtk.Template.Child()
 
-    # toolbar kids
-    # TODO write the whole interface first
+    # editor kids
     editor_stack = Gtk.Template.Child()
     entity_editor = Gtk.Template.Child()
+
+    # toolbar kids
+    # TODO write that part of the interface first
 
     def __init__(self, **kwargs) -> None:
         self._project: StagProject = None

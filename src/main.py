@@ -26,6 +26,7 @@ from gi.repository import Gtk, Gio, Adw
 
 # loading every template once
 from .editor import StagEntityEditor
+from .toolbar import StagToolbar
 from .window import StagWindow
 
 

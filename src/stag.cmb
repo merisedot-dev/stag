@@ -4,7 +4,8 @@
 <cambalache-project version="0.96.0" target_tk="gtk-4.0">
   <gresources filename="stag.gresource.xml" sha256="e33f2501acf45f898183fa8ec0fea2798a845c377f29c20dc7f151166debf3b5"/>
   <ui template-class="StagEntityEditor" filename="editor.ui" sha256="0950e5bcdb91b153c8f16553ac18f32146a4b5566b61be9113460dba34891434"/>
-  <ui template-class="StagWindow" filename="window.ui" sha256="940c9dbf874ceff77b36b38d370f37d937dbfbf31409305ebb502a5eb623b112">
+  <ui template-class="StagWindow" filename="window.ui" sha256="df1b57a13863593e4d93470f2145b59a56c4fdf6d12af96c35658645172558be">
     <requires>StagEntityEditor</requires>
   </ui>
+  <ui filename="toolbar.ui" sha256="e3b24aa00cce07dc73cb163d8c93e1e0f2261fb6c2dfdc3ed26e26cab7873fb2"/>
 </cambalache-project>
