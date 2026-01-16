@@ -5,5 +5,7 @@ from gi.repository import Gtk
 class StagToolbar(Gtk.Box):
     __gtype_name__ = "StagToolbar"
 
+    # TODO fetch kids
+
     def __init__(self) -> None:
         super().__init__()

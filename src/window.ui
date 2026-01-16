@@ -40,6 +40,12 @@
                 <property name="vexpand">True</property>
               </object>
             </child>
+            <child type="end">
+              <object class="GtkButton" id="newproj_btn">
+                <property name="action-name">win.mk_proj</property>
+                <property name="icon-name">list-add-symbolic</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
@@ -48,7 +54,6 @@
               <object class="GtkStack" id="stack">
                 <property name="halign">center</property>
                 <property name="transition-type">crossfade</property>
-                <property name="visible-child-name">welcome</property>
                 <child>
                   <object class="GtkStackPage">
                     <property name="child">
@@ -263,7 +268,6 @@
                             <property name="end-child">
                               <object class="GtkStack" id="editor_stack">
                                 <property name="transition-type">crossfade</property>
-                                <property name="visible-child-name">empty</property>
                                 <child>
                                   <object class="GtkStackPage">
                                     <property name="child">
@@ -283,7 +287,11 @@
                               </object>
                             </property>
                             <property name="start-child">
-                              <object class="GtkPaned"/>
+                              <object class="GtkPaned">
+                                <property name="start-child">
+                                  <object class="StagToolbar"/>
+                                </property>
+                              </object>
                             </property>
                           </object>
                         </property>

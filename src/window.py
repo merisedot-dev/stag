@@ -22,6 +22,7 @@ class StagWindow(Adw.ApplicationWindow):
     undo_btn = Gtk.Template.Child()
     redo_btn = Gtk.Template.Child()
     mainmenu_btn = Gtk.Template.Child()
+    newproj_btn = Gtk.Template.Child()
 
     # stack kids
     stack = Gtk.Template.Child()
@@ -44,6 +45,7 @@ class StagWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs) -> None:
         self._project: StagProject = None
+        self._tmp_project: StagProject = None
         # GTK tools
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
@@ -62,7 +64,7 @@ class StagWindow(Adw.ApplicationWindow):
     # PROPERTIES
     @GObject.Property(type=StagProject)
     def project(self) -> StagProject:
-        return self._project
+        return self._tmp_project
 
     # INTERMEDIATES
     def _set_page(self, page_name: str) -> None:
@@ -86,7 +88,7 @@ class StagWindow(Adw.ApplicationWindow):
         pass  # TODO
 
     def on_mk_proj(self, action, data) -> None:
-        self._project = StagProject()  # empty project for now
+        self._tmp_project = StagProject()  # empty project for now
         self._set_page(PROJECT_FORM_SCREEN_NAME)
 
     def on_open(self, action, data) -> None:
@@ -96,4 +98,5 @@ class StagWindow(Adw.ApplicationWindow):
         pass  # TODO
 
     def on_validate(self, action, data) -> None:
+        # TODO finalise project
         self._set_page(WORKSPACE_SCREEN_NAME)

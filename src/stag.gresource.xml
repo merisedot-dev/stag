@@ -4,5 +4,6 @@
   <gresource prefix="/com/github/merisedotdev/stag">
     <file>window.ui</file>
     <file>editor.ui</file>
+    <file>toolbar.ui</file>
   </gresource>
 </gresources>
