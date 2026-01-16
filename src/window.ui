@@ -6,8 +6,8 @@
   <requires lib="gtk" version="4.12"/>
   <requires lib="libadwaita" version="1.4"/>
   <template class="StagWindow" parent="AdwApplicationWindow">
-    <property name="default-height">800</property>
-    <property name="default-width">1400</property>
+    <property name="default-height">900</property>
+    <property name="default-width">1600</property>
     <property name="title">MeriseGTK</property>
     <child>
       <object class="GtkBox">
@@ -37,6 +37,7 @@
               <object class="GtkMenuButton" id="mainmenu_btn">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">stag_menu</property>
+                <property name="vexpand">True</property>
               </object>
             </child>
           </object>

@@ -67,7 +67,6 @@ class StagWindow(Adw.ApplicationWindow):
         :param page_name: the name of the page to display
         """
         self.stack.set_visible_child_name(page_name)
-        self.__update_actions()
 
     # STATELESS ACTIONS
 
@@ -81,7 +80,8 @@ class StagWindow(Adw.ApplicationWindow):
         pass  # TODO
 
     def on_mk_proj(self, action, data) -> None:
-        pass  # TODO
+        self._project = StagProject()
+        self._set_page(PROJECT_FORM_SCREEN_NAME)
 
     def on_open(self, action, data) -> None:
         pass  # TODO

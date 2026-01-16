@@ -7,5 +7,8 @@ class StagEntityEditor(Gtk.Box):
     """
     __gtype_name__ = "StagEntityEditor"
 
+    # TODO fetch kids
+    stack = Gtk.Template.Child()
+
     def __init__(self) -> None:
         super().__init__()
