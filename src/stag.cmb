@@ -5,7 +5,7 @@
   <gresources filename="stag.gresource.xml" sha256="3f9f3774a05bb7bbb399782f64a13e26ebb72ccb571ea1f5c6df0fc8137173e4"/>
   <ui template-class="StagEntityEditor" filename="editor.ui" sha256="0950e5bcdb91b153c8f16553ac18f32146a4b5566b61be9113460dba34891434"/>
   <ui template-class="StagToolbar" filename="toolbar.ui" sha256="ff01d406587a0ca835ffd8d1fadb47eae87f7e76a4940620912512437e528af9"/>
-  <ui template-class="StagWindow" filename="window.ui" sha256="3e2f0a3df204facddccfee277c621eda780482e2356174c3facf2600011eaefb">
+  <ui template-class="StagWindow" filename="window.ui" sha256="0ade98fe62d71dfea58d0a88f92207817fa0d8db9f89affd73459d3b34f26440">
     <requires>StagEntityEditor</requires>
     <requires>StagToolbar</requires>
   </ui>

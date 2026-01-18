@@ -5,6 +5,8 @@ from gi.repository import Gtk
 class StagToolbar(Gtk.Box):
     __gtype_name__ = "StagToolbar"
 
+    # TODO define interaction with main window
+
     # TODO fetch kids
     mkentity_btn = Gtk.Template.Child()
     mklink_btn = Gtk.Template.Child()

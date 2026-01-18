@@ -19,6 +19,7 @@ class StagProject(GObject.Object):
         # TODO define file/path dict
         super().__init__()
         self._name = name
+        self._paths: dict[str | str] = {}
 
     def set_name(self, name: str) -> None:
         """Change the project's name.

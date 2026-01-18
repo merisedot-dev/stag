@@ -288,8 +288,11 @@
                             </property>
                             <property name="start-child">
                               <object class="GtkPaned">
+                                <property name="end-child">
+                                  <object class="GtkDrawingArea" id="graph_drawing"/>
+                                </property>
                                 <property name="start-child">
-                                  <object class="StagToolbar"/>
+                                  <object class="StagToolbar" id="toolbar"/>
                                 </property>
                               </object>
                             </property>

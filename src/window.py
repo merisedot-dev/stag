@@ -39,13 +39,12 @@ class StagWindow(Adw.ApplicationWindow):
     # editor kids
     editor_stack = Gtk.Template.Child()
     entity_editor = Gtk.Template.Child()
-
-    # toolbar kids
-    # TODO write that part of the interface first
+    toolbar = Gtk.Template.Child()
+    graphs_drawing = Gtk.Template.Child()
 
     def __init__(self, **kwargs) -> None:
-        self._project: StagProject = None
-        self._tmp_project: StagProject = None
+        self._project: StagProject = None  # defined and fully fledged project
+        self._tmp_project: StagProject = None  # temporary project for the form
         # GTK tools
         self._actions = {}  # actions dict for persistance
         # GTK constructors like to do things
@@ -60,6 +59,14 @@ class StagWindow(Adw.ApplicationWindow):
             self._actions[action] = gaction
             self.add_action(gaction)
         # TODO link other parts of the GUI
+        self._set_defaults()
+
+    def _set_defaults(self) -> None:
+        """Utility inner method.
+        This is meant only to simplify the constructor of this class by setting
+        defaults values *without* for widgets triggering warnings left and right
+        """
+        self._set_page(DEFAULT_SCREEN_NAME)
 
     # PROPERTIES
     @GObject.Property(type=StagProject)
